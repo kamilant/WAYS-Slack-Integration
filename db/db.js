@@ -9,8 +9,3 @@ db.once('open', function() {
 });
 
 module.exports = mongoose.connect(`mongodb://mo1306_slack:${pass}@mongo9.mydevil.net/mo1306_slack`, options);
-// module.exports = {
-// 	db: {
-// 		host: '',
-// 	}
-// }
