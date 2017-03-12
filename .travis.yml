@@ -7,14 +7,7 @@ test:
   override:
     - echo "no tests"
 scripts:
-  - | 
-  ssh -v daniel13a@s9.mydevil.net << EOF
-  echo "1. Updated resources"
-  cd ./domains/slack-bot.kamilantropik.pl/public_nodejs
-  git checkout --force master
-  git pull
-  npm install
-  export SLACKBOT_TOKEN=$SLACKBOT_TOKEN
-  devil www restart slack-bot.kamilantropik.pl
-  bash -l
-  EOF 
+  - ssh -v daniel13a@s9.mydevil.net << EOF
+  - cd ./domains/slack.kamilantropik.pl/public_nodejs
+  - git checkout --force master
+  - EOF 
